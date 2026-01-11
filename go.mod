@@ -10,7 +10,10 @@ require (
 )
 
 require (
+	github.com/darui3018823/discordgo v0.29.0-patched-2 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
 	golang.org/x/crypto v0.46.0 // indirect
 	golang.org/x/sys v0.40.0 // indirect
 )
+
+replace github.com/bwmarrin/discordgo => ./discordgo

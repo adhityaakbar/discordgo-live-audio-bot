@@ -6,11 +6,17 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time" // Import time for potential delays
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/gordonklaus/portaudio"
 	"github.com/joho/godotenv"
 	"gopkg.in/hraban/opus.v2"
+)
+
+var (
+	currentVC       *discordgo.VoiceConnection
+	stopAudioStream chan struct{}
 )
 
 func main() {
@@ -77,7 +83,9 @@ func main() {
 				}
 				log.Printf("Successfully joined voice channel '%s' (%s).\n", voiceChannelName, c.ID)
 				joined = true
-				go streamAudio(s, vc)
+				currentVC = vc // Assign to global variable
+				stopAudioStream = make(chan struct{}) // Initialize the channel
+				go streamAudio(s, vc, stopAudioStream)
 				return
 			}
 		}
@@ -116,6 +124,19 @@ func main() {
 
 	// Cleanly close down the Discord session.
 	log.Println("Closing Discord session.")
+	
+	// Signal streamAudio goroutine to stop and clean up voice connection
+	if stopAudioStream != nil {
+		close(stopAudioStream)
+		// Give some time for the goroutine to clean up
+		time.Sleep(1 * time.Second)
+	}
+
+	if currentVC != nil && currentVC.Ready {
+		log.Println("Disconnecting from voice channel.")
+		currentVC.Disconnect()
+	}
+
 	dg.Close()
 }
 
@@ -124,7 +145,7 @@ func ready(s *discordgo.Session, event *discordgo.Ready) {
 	s.UpdateGameStatus(0, "Streaming Audio")
 }
 
-func streamAudio(s *discordgo.Session, vc *discordgo.VoiceConnection) {
+func streamAudio(s *discordgo.Session, vc *discordgo.VoiceConnection, stopChan <-chan struct{}) {
 	log.Println("Starting audio stream.")
 	vc.Speaking(true)
 	defer vc.Speaking(false)
@@ -168,26 +189,32 @@ func streamAudio(s *discordgo.Session, vc *discordgo.VoiceConnection) {
 	// --- Goroutine to receive and play audio ---
 	go func() {
 		for {
-			if vc == nil || !vc.Ready {
-				log.Println("VC not ready, returning from receive goroutine")
+			select {
+			case <-stopChan:
+				log.Println("Stopping audio receive goroutine.")
 				return
-			}
-			p, ok := <-vc.OpusRecv
-			if !ok {
-				log.Println("OpusRecv channel closed, returning from receive goroutine")
-				return
-			}
-			
-			_, err := opusDecoder.Decode(p.Opus, out)
-			if err != nil {
-				log.Println("Error decoding Opus data:", err)
-				continue
-			}
-
-			if speakerStream != nil {
-				err = speakerStream.Write()
+			default:
+				if vc == nil || !vc.Ready {
+					log.Println("VC not ready, returning from receive goroutine")
+					return
+				}
+				p, ok := <-vc.OpusRecv
+				if !ok {
+					log.Println("OpusRecv channel closed, returning from receive goroutine")
+					return
+				}
+				
+				_, err := opusDecoder.Decode(p.Opus, out)
 				if err != nil {
-					log.Println("Error writing to PortAudio output stream:", err)
+					log.Println("Error decoding Opus data:", err)
+					continue
+				}
+
+				if speakerStream != nil {
+					err = speakerStream.Write()
+					if err != nil {
+						log.Println("Error writing to PortAudio output stream:", err)
+					}
 				}
 			}
 		}
@@ -206,20 +233,28 @@ func streamAudio(s *discordgo.Session, vc *discordgo.VoiceConnection) {
 
 	// --- Main loop to read from mic, encode, and send ---
 	for {
-		err = micStream.Read()
-		if err != nil {
-			// log.Println("Error reading from PortAudio input stream:", err)
-		}
+		select {
+		case <-stopChan:
+			log.Println("Stopping audio send goroutine.")
+			micStream.Stop()
+			speakerStream.Stop()
+			return
+		default:
+			err = micStream.Read()
+			if err != nil {
+				// log.Println("Error reading from PortAudio input stream:", err)
+			}
 
-		opusData := make([]byte, 1000)
-		n, err := opusEncoder.Encode(in, opusData)
-		if err != nil {
-			log.Println("Error encoding Opus data:", err)
-			continue
-		}
+			opusData := make([]byte, 1000)
+			n, err := opusEncoder.Encode(in, opusData)
+			if err != nil {
+				log.Println("Error encoding Opus data:", err)
+				continue
+			}
 
-		if vc.Ready {
-			vc.OpusSend <- opusData[:n]
+			if vc.Ready {
+				vc.OpusSend <- opusData[:n]
+			}
 		}
 	}
 }

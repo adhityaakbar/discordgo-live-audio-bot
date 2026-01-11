@@ -1,5 +1,7 @@
-github.com/bwmarrin/discordgo v0.29.0 h1:FmWeXFaKUwrcL3Cx65c20bTRW+vOb6k8AnaP+EgjDno=
-github.com/bwmarrin/discordgo v0.29.0/go.mod h1:NJZpH+1AfhIcyQsPeuBKsUtYrRnjkyu0kIVMCHkZtRY=
+github.com/darui3018823/discordgo v0.29.0-patched h1:gzD5bI4WuI1Ub+1hvVqNVYuyf7ZtEnBW1F3YFXJi77E=
+github.com/darui3018823/discordgo v0.29.0-patched/go.mod h1:bu2ZYWkEYYYCSJAyA4/KkI1uRWQjwYbNsWu+Xd4yP/c=
+github.com/darui3018823/discordgo v0.29.0-patched-2 h1:7xqZ5YoyRCz3+elIOrNlaUv1sHCtIkeXHcMQHjR9NZM=
+github.com/darui3018823/discordgo v0.29.0-patched-2/go.mod h1:bu2ZYWkEYYYCSJAyA4/KkI1uRWQjwYbNsWu+Xd4yP/c=
 github.com/gordonklaus/portaudio v0.0.0-20250206071425-98a94950218b h1:WEuQWBxelOGHA6z9lABqaMLMrfwVyMdN3UgRLT+YUPo=
 github.com/gordonklaus/portaudio v0.0.0-20250206071425-98a94950218b/go.mod h1:esZFQEUwqC+l76f2R8bIWSwXMaPbp79PppwZ1eJhFco=
 github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
