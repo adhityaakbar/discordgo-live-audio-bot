@@ -1,0 +1,104 @@
+2026/01/11 16:16:15 Discord connection opened successfully.
+2026/01/11 16:16:15 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:16:15 Bot is ready!
+2026/01/11 16:16:16 [DG0] voice.go:403:wsListen() voice endpoint c-sin16-2f2d301e.discord.media:443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:16:16 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:16:27 Error joining voice channel: timeout waiting for voice
+2026/01/11 16:16:27 Closing Discord session.
+2026/01/11 16:16:31 Discord connection opened successfully.
+2026/01/11 16:16:31 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:16:31 Bot is ready!
+2026/01/11 16:16:32 [DG0] voice.go:403:wsListen() voice endpoint c-sin20-a1e58c6b.discord.media:2096 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:16:32 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:16:43 Error joining voice channel: timeout waiting for voice
+2026/01/11 16:16:49 [DG0] voice.go:403:wsListen() voice endpoint c-sin18-b81038e4.discord.media:2083 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:16:54 [DG0] voice.go:534:wsHeartbeat() error sending heartbeat to voice endpoint c-sin18-b81038e4.discord.media:2083, websocket: close sent
+2026/01/11 16:16:55 Closing Discord session.
+2026/01/11 16:17:15 Discord connection opened successfully.
+2026/01/11 16:17:15 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:17:15 Bot is ready!
+2026/01/11 16:17:17 [DG0] voice.go:403:wsListen() voice endpoint c-sin06-0d243815.discord.media:2087 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:17:17 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:17:20 Discord connection opened successfully.
+2026/01/11 16:17:20 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:17:20 Bot is ready!
+2026/01/11 16:17:21 [DG0] voice.go:403:wsListen() voice endpoint c-sin06-0d243815.discord.media:2087 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:17:21 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:17:24 Closing Discord session.
+2026/01/11 16:17:32 Error joining voice channel: timeout waiting for voice
+2026/01/11 16:17:37 [DG0] voice.go:403:wsListen() voice endpoint c-sin07-4f7031cf.discord.media:8443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:17:43 [DG0] voice.go:534:wsHeartbeat() error sending heartbeat to voice endpoint c-sin07-4f7031cf.discord.media:8443, websocket: close sent
+2026/01/11 16:17:52 Closing Discord session.
+2026/01/11 16:17:54 Discord connection opened successfully.
+2026/01/11 16:17:54 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:17:54 Bot is ready!
+2026/01/11 16:17:55 [DG0] voice.go:403:wsListen() voice endpoint c-sin09-7ae38be8.discord.media:2096 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:17:55 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:17:57 Closing Discord session.
+2026/01/11 16:18:04 Discord connection opened successfully.
+2026/01/11 16:18:04 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:18:04 Bot is ready!
+2026/01/11 16:18:04 [DG0] voice.go:403:wsListen() voice endpoint c-sin09-7ae38be8.discord.media:2096 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:18:04 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:18:06 Closing Discord session.
+2026/01/11 16:19:09 Discord connection opened successfully.
+2026/01/11 16:19:09 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:19:09 Bot is ready!
+2026/01/11 16:19:10 [DG0] voice.go:403:wsListen() voice endpoint c-sin21-aecd52c7.discord.media:8443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:19:10 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:19:21 Error joining voice channel: timeout waiting for voice
+2026/01/11 16:19:26 [DG0] voice.go:403:wsListen() voice endpoint c-sin17-d72805e3.discord.media:8443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:19:31 [DG0] voice.go:534:wsHeartbeat() error sending heartbeat to voice endpoint c-sin17-d72805e3.discord.media:8443, websocket: close sent
+2026/01/11 16:19:38 Closing Discord session.
+2026/01/11 16:19:48 Discord connection opened successfully.
+2026/01/11 16:19:48 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:19:48 Bot is ready!
+2026/01/11 16:19:49 Successfully joined voice channel 'General' (1458495905589231743).
+2026/01/11 16:19:49 Starting audio stream.
+2026/01/11 16:20:19 Closing Discord session.
+2026/01/11 16:20:19 [DG0] voice.go:403:wsListen() voice endpoint singapore11012.discord.media:443 websocket closed unexpectantly, websocket: close 4022: Disconnected: Call terminated.
+2026/01/11 16:20:19 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:21:12 Discord connection opened successfully.
+2026/01/11 16:21:12 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:21:12 Bot is ready!
+2026/01/11 16:21:13 [DG0] voice.go:403:wsListen() voice endpoint c-sin13-c64a21dc.discord.media:2053 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:21:13 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:21:16 Closing Discord session.
+2026/01/11 16:21:20 Discord connection opened successfully.
+2026/01/11 16:21:20 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:21:20 Bot is ready!
+2026/01/11 16:21:21 [DG0] voice.go:403:wsListen() voice endpoint c-sin11-8fca3dc1.discord.media:443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:21:21 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:21:22 Closing Discord session.
+2026/01/11 16:21:29 Discord connection opened successfully.
+2026/01/11 16:21:29 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:21:29 Bot is ready!
+2026/01/11 16:21:29 [DG0] voice.go:403:wsListen() voice endpoint c-sin08-32b5b41e.discord.media:2053 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:21:29 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:21:31 Closing Discord session.
+2026/01/11 16:22:02 Discord connection opened successfully.
+2026/01/11 16:22:02 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:22:02 Bot is ready!
+2026/01/11 16:22:03 [DG0] voice.go:403:wsListen() voice endpoint c-sin14-4a4f601d.discord.media:2083 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:22:03 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:22:07 Closing Discord session.
+2026/01/11 16:22:11 Discord connection opened successfully.
+2026/01/11 16:22:11 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:22:11 Bot is ready!
+2026/01/11 16:22:12 [DG0] voice.go:403:wsListen() voice endpoint c-sin16-133bcb7f.discord.media:8443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:22:12 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:22:14 Closing Discord session.
+2026/01/11 16:22:59 Discord connection opened successfully.
+2026/01/11 16:22:59 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:22:59 Bot is ready!
+2026/01/11 16:22:59 [DG0] voice.go:403:wsListen() voice endpoint c-sin07-eab2010b.discord.media:8443 websocket closed unexpectantly, websocket: close 4016: Unknown encryption mode.
+2026/01/11 16:22:59 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
+2026/01/11 16:23:03 Closing Discord session.
+2026/01/11 16:23:39 Discord connection opened successfully.
+2026/01/11 16:23:39 Bot is now running. Press CTRL-C to exit.
+2026/01/11 16:23:39 Bot is ready!
+2026/01/11 16:23:40 Successfully joined voice channel 'General' (1458495905589231743).
+2026/01/11 16:23:40 Starting audio stream.
+2026/01/11 16:24:14 Closing Discord session.
+2026/01/11 16:24:14 [DG0] voice.go:403:wsListen() voice endpoint singapore11009.discord.media:443 websocket closed unexpectantly, websocket: close 4022: Disconnected: Call terminated.
+2026/01/11 16:24:14 [DG0] voice.go:199:Close() error closing websocket, websocket: close sent
