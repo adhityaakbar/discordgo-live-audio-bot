@@ -1,6 +1,6 @@
 module discord-audio-stream
 
-go 1.25.5
+go 1.22
 
 require (
 	github.com/bwmarrin/discordgo v0.29.0
