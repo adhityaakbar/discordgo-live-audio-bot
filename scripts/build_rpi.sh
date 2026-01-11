@@ -1,6 +1,28 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ensure_deps() {
+  if ! command -v pkg-config >/dev/null 2>&1; then
+    sudo apt update
+    sudo apt install -y pkg-config
+  fi
+
+  if ! pkg-config --exists portaudio-2.0; then
+    sudo apt update
+    sudo apt install -y portaudio19-dev
+  fi
+
+  if ! pkg-config --exists opus; then
+    sudo apt update
+    sudo apt install -y libopus-dev
+  fi
+
+  if ! pkg-config --exists opusfile; then
+    sudo apt update
+    sudo apt install -y libopusfile-dev
+  fi
+}
+
 arch="$(uname -m)"
 goarch=""
 goarm=""
@@ -22,6 +44,8 @@ case "$arch" in
     exit 1
     ;;
 esac
+
+ensure_deps
 
 echo "Building for linux/${goarch} (GOARM=${goarm:-})"
 if [[ -n "$goarm" ]]; then
